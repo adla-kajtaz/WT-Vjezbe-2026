@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Box Model Demonstracija</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 100px;
+        background-color: orange;
+        border: 5px solid red;
+        display: inline-block;
+        vertical-align: top;
+        color: white;
+        font-weight: bold;
+      }
+
+      .padding-box {
+        padding: 40px;
+      }
+
+      .margin-box {
+        margin: 40px;
+      }
+
+      .container {
+        background-color: lightgrey;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Demonstracija Box Modela</h2>
+
+    <div class="container">
+      <div class="box">Obična kutija</div>
+
+      <div class="box padding-box">Kutija sa Paddingom</div>
+
+      <div class="box margin-box">Kutija sa Marginom</div>
+    </div>
+  </body>
+</html>
