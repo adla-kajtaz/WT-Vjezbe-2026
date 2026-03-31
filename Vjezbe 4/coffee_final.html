@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Coffee Corner</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #f8f5f2;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #3a2a22;
+        margin: 0;
+        padding: 15px 20px;
+      }
+
+      .wrapper {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      header h1 {
+        font-size: 2.5em;
+        margin: 0 0 10px 0;
+        color: #2c1e16;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      nav ul {
+        background-color: #2c1e16;
+        padding: 8px 25px;
+        margin: 0 auto;
+        list-style: none;
+
+        display: inline-flex;
+        gap: 20px;
+
+        border-radius: 50px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #f8f5f2;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 0.85em;
+      }
+
+      nav a.current {
+        color: #d4a373;
+      }
+
+      .main {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+      }
+
+      .coffee-types {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      aside {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      article {
+        background-color: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
+        display: flex;
+        align-items: stretch;
+      }
+
+      figure {
+        margin: 0;
+        width: 200px;
+        position: relative;
+      }
+
+      figure img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      figcaption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(44, 30, 22, 0.8);
+        color: white;
+        padding: 6px;
+        text-align: center;
+        font-size: 0.8em;
+      }
+
+      .article-content {
+        padding: 20px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      hgroup h2 {
+        margin: 0;
+        color: #d4a373;
+        font-size: 1.4em;
+      }
+
+      hgroup h3 {
+        margin: 5px 0 10px 0;
+        font-weight: normal;
+        color: #888;
+        font-size: 0.95em;
+      }
+
+      .article-content p {
+        line-height: 1.5;
+        margin: 0;
+        font-size: 0.95em;
+      }
+
+      .popular-drinks,
+      .contact-details {
+        background-color: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      aside h2 {
+        margin-top: 0;
+        color: #2c1e16;
+        border-bottom: 2px solid #f8f5f2;
+        padding-bottom: 8px;
+        font-size: 1.3em;
+      }
+
+      .popular-drinks a {
+        color: #555;
+        text-decoration: none;
+        display: block;
+        padding: 8px 0;
+        border-bottom: 1px dashed #eee;
+        font-size: 0.95em;
+      }
+
+      .contact-details p {
+        line-height: 1.6;
+        margin: 0;
+        font-size: 0.95em;
+      }
+
+      footer {
+        margin-top: 30px;
+        text-align: center;
+        color: #888;
+        font-size: 0.85em;
+        border-top: 1px solid #ddd;
+        padding-top: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>The Coffee Corner</h1>
+        <nav>
+          <ul>
+            <li><a href="" class="current">Početna</a></li>
+            <li><a href="">Zrno</a></li>
+            <li><a href="">Oprema</a></li>
+            <li><a href="">O nama</a></li>
+            <li><a href="">Kontakt</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="main">
+        <section class="coffee-types">
+          <article>
+            <figure>
+              <img src="images/espresso.jpg" alt="Espresso kafa" />
+              <figcaption>Espresso</figcaption>
+            </figure>
+            <div class="article-content">
+              <hgroup>
+                <h2>Klasični Espresso</h2>
+                <h3>Osnova svake dobre kafe</h3>
+              </hgroup>
+              <p>
+                Koncentrovani oblik kafe koji se poslužuje u malim, jakim
+                dozama. Predstavlja bazu za većinu drugih napitaka od kafe.
+                Otkrijte pravu aromu.
+              </p>
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="images/cappuccino.jpg" alt="Cappuccino" />
+              <figcaption>Cappuccino</figcaption>
+            </figure>
+            <div class="article-content">
+              <hgroup>
+                <h2>Kremasti Cappuccino</h2>
+                <h3>Savršen balans mlijeka i kafe</h3>
+              </hgroup>
+              <p>
+                Popularni napitak od kafe koji potiče iz Italije, a priprema se
+                od jednakih dijelova espressa, toplog mlijeka i bogate mliječne
+                pjene.
+              </p>
+            </div>
+          </article>
+        </section>
+        <aside>
+          <section class="popular-drinks">
+            <h2>Popularni Napici</h2>
+            <a href="">Americano (espresso + voda)</a>
+            <a href="">Macchiato (espresso + pjena)</a>
+            <a href="">Flat White (dupli espresso)</a>
+            <a href="">Mocha (sa čokoladom)</a>
+          </section>
+          <section class="contact-details">
+            <h2>Kontakt</h2>
+            <p>
+              <strong>The Coffee Corner</strong><br />
+              Zagrebačka 15<br />
+              71000 Sarajevo<br />
+              Bosna i Hercegovina
+            </p>
+          </section>
+        </aside>
+      </div>
+      <footer>
+        &copy; 2026 The Coffee Corner | Kreirano sa ljubavlju i kafom
+      </footer>
+    </div>
+  </body>
+</html>
