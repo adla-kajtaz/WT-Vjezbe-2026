@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #kontenjer {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="dodaj()">Dodaj paragraf</button>
+    <button onclick="ukloni()">Ukloni paragraf</button>
+    <div id="kontenjer"></div>
+  </body>
+  <script>
+    function dodaj() {
+      let novi = document.createElement("p");
+      novi.innerText = "Novi paragraf";
+      document.getElementById("kontenjer").appendChild(novi);
+    }
+    function ukloni() {
+      document.getElementById("kontenjer").innerHTML = "";
+    }
+  </script>
+</html>

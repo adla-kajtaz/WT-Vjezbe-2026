@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="ime" placeholder="Unesi ime" />
+    <button onclick="pozdrav()">Click</button>
+  </body>
+  <script>
+    function pozdrav() {
+      let unosIme = document.getElementById("ime").value;
+      const unos = document.getElementById("ime");
+      let ime = unos.value;
+      alert("Pozdrav, " + ime);
+    }
+  </script>
+</html>

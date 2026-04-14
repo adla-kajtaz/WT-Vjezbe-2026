@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="primjer">JavaScript moze promijeniti sadrzaj HTML-a.</p>
+    <button
+      onclick="document.getElementById('primjer').innerText = 'Pozdrav svima!'"
+    >
+      Click
+    </button>
+    <button onclick="promijeniTekst()">Click 2</button>
+  </body>
+  <script>
+    function promijeniTekst() {
+      const paragraf = document.getElementById("primjer");
+      paragraf.innerHTML = "<b>Pozdrav svima - funkcija<b>";
+    }
+  </script>
+</html>

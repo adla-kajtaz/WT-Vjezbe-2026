@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <input type="number" id="broj1" placeholder="Unesite prvi broj..." />
+      <p>+</p>
+      <input type="number" id="broj2" placeholder="Unesite drugi broj..." />
+      <button onclick="saberi()">Saberi</button>
+      <div id="historija"></div>
+    </div>
+  </body>
+  <script>
+    function saberi() {
+      const unos1 = document.getElementById("broj1");
+      const unos2 = document.getElementById("broj2");
+      const historija = document.getElementById("historija");
+
+      const br1 = Number(unos1.value);
+      const br2 = Number(unos2.value);
+      if (unos1.value === "" || unos2.value === "") {
+        alert("Trebate unijeti oba broja da bi se izvrsila operacija!");
+        return;
+      }
+
+      const rezultat = br1 + br2;
+      historija.innerHTML += rezultat + "<br/>";
+      unos1.value = "";
+      unos2.value = "";
+    }
+  </script>
+</html>

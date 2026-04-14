@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #box {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+    <button onclick="povecaj()">+</button>
+    <button onclick="umanji()">-</button>
+  </body>
+  <script>
+    let sirina = 100;
+    function povecaj() {
+      sirina += 10;
+      document.getElementById("box").style.width = sirina + "px";
+    }
+    function umanji() {
+      sirina -= 10;
+      document.getElementById("box").style.width = sirina + "px";
+    }
+  </script>
+</html>

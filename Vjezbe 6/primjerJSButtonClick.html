@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Button Click</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #eef2f3;
+      }
+      .card {
+        text-align: center;
+        padding: 30px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Interakcija sa korisnikom</h2>
+      <p>Kliknite na dugme ispod da aktivirate alert.</p>
+      <button id="dugme">Klikni me!</button>
+    </div>
+  </body>
+  <script>
+    const dugme = document.getElementById("dugme");
+    dugme.addEventListener("click", function () {
+      alert("Uspješno ste pokrenuli događaj klikom na dugme!");
+    });
+  </script>
+</html>

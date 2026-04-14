@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="p1">Pozdrav</p>
+    <p id="p2">Pozdrav</p>
+    <button id="dugme" onclick="promjenaPozadine()">Click</button>
+  </body>
+  <script>
+    document.getElementById("p1").style.color = "blue";
+    document.getElementById("p1").style.fontWeight = "bold";
+    function promjenaPozadine() {
+      document.body.style.background = "pink";
+    }
+  </script>
+</html>
