@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      #collapsible-glavni {
+        width: 400px;
+      }
+
+      * {
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      #collapsible-naslov {
+        background-color: rgb(100, 138, 179);
+        width: 100%;
+        color: white;
+        padding: 10px;
+        cursor: pointer;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      #collapsible-text {
+        background-color: rgb(247, 248, 248);
+        width: 100%;
+        font-size: smaller;
+        overflow: hidden;
+        transition: 0.5s;
+        height: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="collapsible-glavni">
+      <div id="collapsible-naslov" onclick="show()">
+        <span id="collapsible-naslov-label"> Informacije o studentu </span>
+        <span id="collapsible-plus"> + </span>
+      </div>
+
+      <div id="collapsible-text">
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen bookurvived not only five
+        centuries, but also the leap into electronic typesetting, remaining
+        unchanged. It was popularised in the 1960s with the release of Letraset
+        sheets containing Ipsum passages, and more recently with desktop
+        publishing software like Aldus PageMaker including versions of Lorem
+        Ipsum.
+      </div>
+    </div>
+
+    <script>
+      var collapsibleDiv = document.getElementById("collapsible-text");
+      var otvoren = false;
+      function show() {
+        otvoren = !otvoren;
+        if (otvoren) {
+          collapsibleDiv.style.height = "140px";
+        } else {
+          collapsibleDiv.style.height = 0;
+        }
+      }
+    </script>
+  </body>
+</html>

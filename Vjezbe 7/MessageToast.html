@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toastr Example</title>
+    <style>
+      #wrapper {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .toastr-message {
+        background-color: green;
+        color: white;
+        width: 250px;
+        text-align: center;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        font-family: sans-serif;
+      }
+      h3,
+      p {
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="messageSuccess()">Ovo je success message!</button>
+    <div id="wrapper"></div>
+
+    <script>
+      const kontenjer = document.getElementById("wrapper");
+
+      const messageSuccess = () => {
+        const novaPoruka = document.createElement("div");
+
+        novaPoruka.classList.add("toastr-message");
+
+        novaPoruka.innerHTML = `
+          <h3>Success</h3>
+          <p>This message is success.</p>
+        `;
+
+        kontenjer.appendChild(novaPoruka);
+
+        setTimeout(() => {
+          novaPoruka.remove();
+        }, 3000);
+      };
+    </script>
+  </body>
+</html>
