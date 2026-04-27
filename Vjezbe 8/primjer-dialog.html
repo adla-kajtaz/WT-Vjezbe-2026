@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="bs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testiranje Dialog Komponente</title>
+
+    <link rel="stylesheet" href="dialog.css" />
+  </head>
+  <body>
+    <button onclick="testirajAlert()">Prikaži Alert (Samo poruka)</button>
+    <button onclick="testirajConfirm()">Prikaži Confirm (Da / Ne)</button>
+
+    <script src="dialog.js"></script>
+
+    <script>
+      function testirajAlert() {
+        prikaziDialog({
+          tip: "alert",
+          poruka:
+            "Ovo je obično upozorenje. Korisnik može samo pritisnuti 'U redu'.",
+        });
+      }
+
+      function testirajConfirm() {
+        prikaziDialog({
+          tip: "confirm",
+          poruka: "Da li ste sigurni da želite izvršiti ovu akciju?",
+          onPotvrda: function () {
+            alert("Izvršit će se operacija");
+          },
+        });
+      }
+    </script>
+  </body>
+</html>
