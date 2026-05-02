@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="todo.css" />
+  </head>
+  <body>
+    <div class="todo-container">
+      <h2>My Tasks</h2>
+
+      <div class="input-group">
+        <input type="text" id="taskInput" placeholder="Add a new task..." />
+        <button id="addTaskBtn">Add Task</button>
+      </div>
+
+      <ul id="taskList">
+        <!-- Tasks will be injected here by script.js -->
+        <!-- Example of how a task will look:
+            <li>
+                <input type="checkbox" class="task-checkbox">
+                <span class="task-text">Example Task</span>
+            </li>
+            -->
+      </ul>
+
+      <div class="action-buttons">
+        <button id="removeFinishedBtn">Remove Finished</button>
+        <button id="removeAllBtn">Remove All</button>
+      </div>
+    </div>
+
+    <script src="todo.js"></script>
+  </body>
+</html>
