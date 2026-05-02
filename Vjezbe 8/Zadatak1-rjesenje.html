@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="bs">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kalkulator</title>
+    <link rel="stylesheet" href="dialog.css" />
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        padding: 30px;
+        background-color: #f4f4f9;
+      }
+      .kalkulator-box {
+        max-width: 350px;
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+      .input-grupa {
+        margin-bottom: 15px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #555;
+      }
+      input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        box-sizing: border-box;
+      }
+
+      .operacije {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        margin: 20px 0;
+      }
+      button {
+        padding: 10px;
+        border: none;
+        border-radius: 6px;
+        background-color: #2196f3;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      button:hover {
+        background-color: #1976d2;
+      }
+
+      .btn-reset {
+        grid-column: span 4;
+        background-color: #ff9800;
+        font-size: 16px;
+        margin-top: 5px;
+      }
+      .btn-reset:hover {
+        background-color: #f57c00;
+      }
+
+      .rezultat-sekcija {
+        border-top: 2px solid #eee;
+        padding-top: 15px;
+        margin-top: 10px;
+      }
+      #textC {
+        background-color: #e9ecef;
+        font-weight: bold;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="kalkulator-box">
+      <div class="input-grupa">
+        <label>Broj A</label>
+        <input type="number" id="textA" placeholder="Unesite broj" />
+      </div>
+
+      <div class="input-grupa">
+        <label>Broj B</label>
+        <input type="number" id="textB" placeholder="Unesite broj" />
+      </div>
+
+      <div class="operacije">
+        <button onclick="izracunaj('+')">+</button>
+        <button onclick="izracunaj('-')">-</button>
+        <button onclick="izracunaj('*')">*</button>
+        <button onclick="izracunaj('/')">/</button>
+
+        <button class="btn-reset" onclick="pokreniReset()">
+          Resetuj polja
+        </button>
+      </div>
+
+      <div class="rezultat-sekcija">
+        <label>Rezultat (C)</label>
+        <input type="text" id="textC" disabled />
+      </div>
+    </div>
+
+    <script src="dialog.js"></script>
+
+    <script>
+      function izracunaj(operacija) {
+        const a = Number(document.getElementById("textA").value);
+        const b = Number(document.getElementById("textB").value);
+        let rezultat = 0;
+
+        switch (operacija) {
+          case "+":
+            rezultat = a + b;
+            break;
+          case "-":
+            rezultat = a - b;
+            break;
+          case "*":
+            rezultat = a * b;
+            break;
+          case "/":
+            if (b === 0) {
+              prikaziDialog({
+                tip: "alert",
+                poruka:
+                  "Matematička greška: Dijeljenje sa nulom nije dozvoljeno!",
+              });
+              return;
+            }
+            rezultat = a / b;
+            break;
+        }
+
+        document.getElementById("textC").value = rezultat;
+      }
+
+      function pokreniReset() {
+        prikaziDialog({
+          tip: "confirm",
+          poruka: "Da li ste sigurni da želite obrisati sve unose i rezultat?",
+          onPotvrda: function () {
+            document.getElementById("textA").value = "";
+            document.getElementById("textB").value = "";
+            document.getElementById("textC").value = "";
+          },
+        });
+      }
+    </script>
+  </body>
+</html>
