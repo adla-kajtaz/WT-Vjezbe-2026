@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        display: flex;
+      }
+      p {
+        padding-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="ispisiPodatke()">Ispisi podatke</button>
+
+    <div>
+      <p><strong>Ime</strong></p>
+      <p id="ime"></p>
+    </div>
+    <div>
+      <p><strong>Prezime</strong></p>
+      <p id="prezime"></p>
+    </div>
+
+    <div>
+      <p><strong>Broj indeksa</strong></p>
+      <p id="brIndeksa"></p>
+    </div>
+
+    <div>
+      <p><strong>Godina studija</strong></p>
+      <p id="godStudija"></p>
+    </div>
+  </body>
+  <script>
+    let student = {
+      ime: "Test",
+      prezime: "Test",
+      brIndeksa: "BB000000",
+      godinaStudija: 1,
+    };
+
+    function ispisiPodatke() {
+      document.getElementById("ime").innerText = student.ime;
+      document.getElementById("prezime").innerText = student.prezime;
+      document.getElementById("brIndeksa").innerText = student.brIndeksa;
+      document.getElementById("godStudija").innerText = student.godinaStudija;
+    }
+  </script>
+</html>

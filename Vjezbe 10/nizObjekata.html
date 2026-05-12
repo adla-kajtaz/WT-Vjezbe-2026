@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 20px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      .controls {
+        margin-bottom: 20px;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="controls">
+      <button onclick="ispisiPodatke()">Ispisi podatke</button>
+      <input
+        type="text"
+        id="studentNameInput"
+        placeholder="Unesi ime studneta..."
+      />
+      <button onclick="getStudentByIme()">Pretraži po imenu</button>
+    </div>
+    <table id="studentiTabela">
+      <thead>
+        <tr>
+          <th>Ime</th>
+          <th>Prezime</th>
+          <th>Broj indeksa</th>
+          <th>Godina studija</th>
+        </tr>
+      </thead>
+      <tbody id="studentiTabelaTijelo">
+        <!-- Podaci će se ovdje učitati -->
+      </tbody>
+    </table>
+  </body>
+  <script>
+    let studenti = [
+      {
+        ime: "Test",
+        prezime: "Test",
+        brIndeksa: "BB000000",
+        godinaStudija: 1,
+      },
+      {
+        ime: "Test1",
+        prezime: "Test1",
+        brIndeksa: "BB000001",
+        godinaStudija: 1,
+      },
+      {
+        ime: "Test2",
+        prezime: "Test2",
+        brIndeksa: "BB000002",
+        godinaStudija: 1,
+      },
+    ];
+
+    function ispisiPodatke() {
+      const tableBody = document.getElementById("studentiTabelaTijelo");
+      tableBody.innerHTML = "";
+      studenti.forEach((student) => {
+        const row = `<tr>
+            <td>${student.ime}</td>
+            <td>${student.prezime}</td>
+            <td>${student.brIndeksa}</td>
+            <td>${student.godinaStudija}</td>
+        </tr>`;
+        tableBody.innerHTML += row;
+      });
+    }
+
+    function getStudentByIme() {
+      const searchName = document
+        .getElementById("studentNameInput")
+        .value.toLowerCase();
+      const filteredStudents = studenti.filter((student) =>
+        student.ime.toLowerCase().includes(searchName.toLowerCase()),
+      );
+      const tableBody = document.getElementById("studentiTabelaTijelo");
+      tableBody.innerHTML = "";
+      filteredStudents.forEach((student) => {
+        const row = `<tr>
+            <td>${student.ime}</td>
+            <td>${student.prezime}</td>
+            <td>${student.brIndeksa}</td>
+            <td>${student.godinaStudija}</td>
+        </tr>`;
+        tableBody.innerHTML += row;
+      });
+    }
+  </script>
+</html>
