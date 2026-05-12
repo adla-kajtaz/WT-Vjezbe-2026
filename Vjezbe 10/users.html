@@ -86,8 +86,8 @@
       const users = await response.json();
 
       const filteredUsers = users.filter(
-        (user) => user.name.toLowerCase().includes(searchName.toLowerCase()),
-        //user.name.toLowerCase().startsWith(searchNametoLowerCase()),
+        (user) => user.name.toLowerCase().includes(searchName),
+        //user.name.toLowerCase().startsWith(searchName),
       );
       const tableBody = document.getElementById("userTableBody");
       tableBody.innerHTML = ""; // Očisti prethodne podatke

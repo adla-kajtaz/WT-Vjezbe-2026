@@ -95,7 +95,7 @@
         .getElementById("studentNameInput")
         .value.toLowerCase();
       const filteredStudents = studenti.filter((student) =>
-        student.ime.toLowerCase().includes(searchName.toLowerCase()),
+        student.ime.toLowerCase().includes(searchName),
       );
       const tableBody = document.getElementById("studentiTabelaTijelo");
       tableBody.innerHTML = "";
