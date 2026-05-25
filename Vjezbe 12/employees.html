@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employees</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="form-container">
+      <h3>Add New Employee</h3>
+      <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" placeholder="Enter first name" />
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" placeholder="Enter last name" />
+      </div>
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" id="age" placeholder="Enter age" />
+      </div>
+      <div class="form-group">
+        <label for="salary">Salary:</label>
+        <input type="number" id="salary" placeholder="Enter salary" />
+      </div>
+      <button onclick="addEmployee()">Add Employee</button>
+    </div>
+    <div class="controls">
+      <button onclick="getAllEmployees()">Load all employees</button>
+      <input
+        type="text"
+        id="employeeNameInput"
+        placeholder="Enter the name of the employee..."
+      />
+      <button onclick="getEmployeeByName()">Search by name</button>
+    </div>
+    <table id="employeeTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>First name</th>
+          <th>Last name</th>
+          <th>Age</th>
+          <th>Salary</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="employeeTableBody">
+        <!-- Podaci će se ovdje učitati -->
+      </tbody>
+    </table>
+    <dialog id="editDialog">
+      <h3 id="dialogTitle">Edit Employee</h3>
+      <input type="hidden" id="editEmployeeId" />
+
+      <div class="dialog-form-group">
+        <label for="editFirstName">First Name:</label>
+        <input type="text" id="editFirstName" />
+      </div>
+      <div class="dialog-form-group">
+        <label for="editLastName">Last Name:</label>
+        <input type="text" id="editLastName" />
+      </div>
+      <div class="dialog-form-group">
+        <label for="editAge">Age:</label>
+        <input type="number" id="editAge" />
+      </div>
+      <div class="dialog-form-group">
+        <label for="editSalary">Salary:</label>
+        <input type="number" id="editSalary" />
+      </div>
+
+      <div class="dialog-buttons">
+        <button class="btn-close" onclick="closeDialog()">Cancel</button>
+        <button class="btn-save" onclick="saveEmployeeChanges()">
+          Save Changes
+        </button>
+      </div>
+    </dialog>
+  </body>
+  <script src="script.js"></script>
+</html>
