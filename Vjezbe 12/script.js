@@ -148,7 +148,6 @@ async function saveEmployeeChanges() {
 }
 
 function clearForm() {
-  editEmployeeId = null;
   document.getElementById("firstName").value = "";
   document.getElementById("lastName").value = "";
   document.getElementById("age").value = "";
