@@ -13,28 +13,45 @@
         <label for="name">Name:</label>
         <input type="text" id="name" placeholder="Enter name" />
       </div>
-      <button>Add City</button>
+      <button onclick="addCity()">Add City</button>
     </div>
     <div class="controls">
-      <button>Load all cities</button>
+      <button onclick="getAllCities()">Load all cities</button>
       <input
         type="text"
         id="cityNameInput"
         placeholder="Enter the name of the city..."
       />
-      <button>Search by name</button>
+      <button onclick="getCityByName()">Search by name</button>
     </div>
     <table id="cityTable">
       <thead>
         <tr>
           <th>ID</th>
           <th>Name</th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody id="cityTableBody">
         <!-- Podaci će se ovdje učitati -->
       </tbody>
     </table>
+    <dialog id="editDialog">
+      <h3 id="dialogTitle">Edit City</h3>
+      <input type="hidden" id="editCityId" />
+
+      <div class="dialog-form-group">
+        <label for="editName">Name:</label>
+        <input type="text" id="editName" />
+      </div>
+
+      <div class="dialog-buttons">
+        <button class="btn-close" onclick="closeDialog()">Cancel</button>
+        <button class="btn-save" onclick="saveCityChanges()">
+          Save Changes
+        </button>
+      </div>
+    </dialog>
   </body>
   <script src="script.js"></script>
 </html>

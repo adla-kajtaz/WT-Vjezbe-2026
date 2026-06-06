@@ -1,0 +1,116 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+th {
+  background-color: #f2f2f2;
+}
+.controls {
+  margin-bottom: 20px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 20px;
+}
+.form-container {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #eee;
+}
+.form-group {
+  margin-bottom: 10px;
+  display: inline-block;
+  margin-right: 15px;
+  vertical-align: top;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.form-group input,
+.form-group select {
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 180px;
+  box-sizing: border-box;
+}
+button {
+  padding: 6px 12px;
+  cursor: pointer;
+}
+.btn-add-container {
+  display: block;
+  margin-top: 10px;
+}
+.btn-update {
+  background-color: #ffc107;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-right: 5px;
+  border-radius: 3px;
+}
+.btn-delete {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+dialog {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  padding: 25px;
+  width: 400px;
+}
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+.dialog-form-group {
+  margin-bottom: 15px;
+}
+.dialog-form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.dialog-form-group input,
+.dialog-form-group select {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.dialog-buttons {
+  text-align: right;
+  margin-top: 20px;
+}
+.btn-close {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  margin-right: 5px;
+  border-radius: 4px;
+}
+.btn-save {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
